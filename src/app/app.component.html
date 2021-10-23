@@ -1,0 +1,12 @@
+<ul>
+  <div *ngFor="let data of JSONData">
+    <input
+      type="checkbox"
+      [id]="data.id"
+      [checked]="data.isSelect"
+      [(ngModel)]="data.isSelect"
+      (change)="ChangeEvent($event)"
+    />
+    {{ data.name }}
+  </div>
+</ul>
